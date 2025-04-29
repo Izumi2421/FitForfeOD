@@ -11,61 +11,63 @@
     <ImageView
         android:id="@+id/imageView5"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
+        android:layout_height="370dp"
         android:src="@drawable/intro_pic"
-        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- Main Title Text -->
     <TextView
         android:id="@+id/textView8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:fontFamily="@font/lustria"
         android:gravity="center"
         android:text="@string/fitforge"
         android:textColor="#DCD5D5"
         android:textSize="55sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/imageView5"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" /> <!-- Added margin for better spacing -->
 
+    <!-- Description Text -->
     <TextView
         android:id="@+id/textView2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginStart="32dp"
         android:layout_marginEnd="32dp"
-        android:text="We are committed to providing a safe and supportive environment for all users. Please be respectful of others and refrain from using offensive language."
+        android:layout_marginBottom="24dp"
+        android:text="We prioritize creating a safe and inclusive space for all users. Please respect one another and refrain from using inappropriate language to ensure a positive experience for everyone."
         android:textAlignment="center"
         android:textColor="#88DCCBCB"
-        android:textSize="16sp"
+        android:textSize="13sp"
         android:typeface="serif"
-        app:layout_constraintTop_toBottomOf="@id/textView8"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textView8"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
+    <!-- Button Layout -->
     <LinearLayout
         android:id="@+id/buttonLayout"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
         android:gravity="center"
         android:orientation="horizontal"
-        app:layout_constraintTop_toBottomOf="@id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        android:layout_marginBottom="10dp"> <!-- Reduced margin for better layout spacing -->
 
         <Button
             android:id="@+id/logbutt"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginEnd="8dp"
+            android:layout_weight="1"
             android:background="@drawable/for_buttons"
             android:backgroundTint="@null"
             android:text="@string/login"
@@ -77,8 +79,8 @@
             android:id="@+id/button2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_marginStart="8dp"
+            android:layout_weight="1"
             android:background="@drawable/for_buttons"
             android:backgroundTint="@null"
             android:text="@string/sign_up"
@@ -87,6 +89,7 @@
             android:typeface="serif" />
     </LinearLayout>
 
+    <!-- Secondary Text -->
     <TextView
         android:id="@+id/textViewMessage"
         android:layout_width="wrap_content"
@@ -97,8 +100,8 @@
         android:textColor="#88DCCBCB"
         android:textSize="14sp"
         android:typeface="serif"
-        app:layout_constraintTop_toBottomOf="@id/buttonLayout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonLayout"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
