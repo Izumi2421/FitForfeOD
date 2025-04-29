@@ -5,90 +5,100 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/mainColor"
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:adjustViewBounds="true"
-        android:contentDescription="@string/todo"
-        android:scaleType="fitXY"
-        android:src="@drawable/homepage"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:src="@drawable/intro_pic"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
-        android:id="@+id/textView"
-        android:layout_width="248dp"
-        android:layout_height="84dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="130dp"
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
         android:fontFamily="@font/lustria"
+        android:gravity="center"
         android:text="@string/fitforge"
-        android:textColor="#FBE8B6"
-        android:textSize="60sp"
-        app:layout_constraintBottom_toTopOf="@+id/logbutt"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:textColor="#DCD5D5"
+        android:textSize="55sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/imageView5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-
-    <Button
-        android:id="@+id/logbutt"
-        android:layout_width="134dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="80dp"
-        android:background="@drawable/for_buttons"
-        android:gravity="center"
-        android:text="@string/login"
-        android:textAlignment="center"
-        android:textColor="#050505"
-        android:textSize="20sp"
-        android:typeface="serif"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toEndOf="@+id/button2"
-        app:layout_constraintStart_toStartOf="@+id/button2"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
-        android:backgroundTint="@null"/>
-
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="134dp"
-        android:layout_height="83dp"
-        android:layout_marginBottom="121dp"
-        android:background="@drawable/for_buttons"
-        android:gravity="center"
-        android:text="@string/sign_up"
-        android:textAlignment="center"
-        android:textColor="#050505"
-        android:textSize="20sp"
-        android:typeface="serif"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
-        app:layout_constraintEnd_toEndOf="@+id/textView2"
-        app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@id/logbutt"
-        android:backgroundTint="@null"/>
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="94dp"
-        android:text="@string/make_your_first_step_towards_becoming_fit"
-        android:textColor="#ffffff"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
+        android:text="We are committed to providing a safe and supportive environment for all users. Please be respectful of others and refrain from using offensive language."
+        android:textAlignment="center"
+        android:textColor="#88DCCBCB"
         android:textSize="16sp"
         android:typeface="serif"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/textView8"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/textView2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <Button
+            android:id="@+id/logbutt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginEnd="8dp"
+            android:background="@drawable/for_buttons"
+            android:backgroundTint="@null"
+            android:text="@string/login"
+            android:textColor="#050505"
+            android:textSize="18sp"
+            android:typeface="serif" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="8dp"
+            android:background="@drawable/for_buttons"
+            android:backgroundTint="@null"
+            android:text="@string/sign_up"
+            android:textColor="#050505"
+            android:textSize="18sp"
+            android:typeface="serif" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textViewMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Make your first step towards becoming fit"
+        android:textAlignment="center"
+        android:textColor="#88DCCBCB"
+        android:textSize="14sp"
+        android:typeface="serif"
+        app:layout_constraintTop_toBottomOf="@id/buttonLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
