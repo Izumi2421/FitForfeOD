@@ -63,4 +63,8 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
+
+    // library for nutritionix api
+    implementation (libs.volley)
+
 }

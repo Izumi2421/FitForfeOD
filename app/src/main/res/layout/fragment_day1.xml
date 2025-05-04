@@ -20,6 +20,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
-    <!-- You can add other views here, such as buttons, images, or custom UI components for Day 1 -->
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,7 +19,7 @@ public class Gender extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         EdgeToEdge.enable(this);
-        setContentView(R.layout.gender);
+        setContentView(R.layout.to_macro);
 
         firebaseAuth = FirebaseAuth.getInstance();
 
@@ -38,7 +38,7 @@ public class Gender extends AppCompatActivity {
 
 
         Button Male = findViewById(R.id.bttnm);
-        Male.setOnClickListener(v -> startActivity(new Intent(Gender.this, Navdraw.class)));
+        Male.setOnClickListener(v -> startActivity(new Intent(Gender.this, Macro.class)));
 
     }
 }
